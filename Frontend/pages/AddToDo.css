@@ -1,0 +1,34 @@
+.addtodo__task{
+border:none;
+font-size:large;
+text-decoration: underline 2px solid lightgray;
+height:6vh;
+width:50%;
+font-family:'Alegreya SC', serif;;
+}
+.addtodo__task:focus,.addtodo__date:focus{
+    outline: none;
+}
+.addtodo__date{
+border:none;
+font-size: large;
+font-family:'Alegreya SC', serif;
+color:gray;
+text-decoration: underline;    
+height:6vh;
+width:50%;
+}
+
+.addtodo__btn{
+    background-color: #6B7481 ;
+    font-size: large;
+    font-family:'Alegreya SC', serif;
+    color:white;
+    text-align: center;
+    height:4vh;
+    width:100%;
+    border:none;
+}
+.addtodo__task:focus,.addtodo__date:focus,.addtodo__btn:focus{
+    outline: none;
+}

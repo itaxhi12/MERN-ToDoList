@@ -1,0 +1,7 @@
+.todo{
+    display:flex;
+    justify-content: space-around;
+    background-color: #FAF9FB;
+    color:#012A36;
+    margin-bottom: 2px;
+}

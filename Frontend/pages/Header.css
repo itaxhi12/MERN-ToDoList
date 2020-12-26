@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC&display=swap');
+.header{
+    background-color: darkcyan;
+    font-family: 'Alegreya SC', serif;
+    font-size:x-large;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center ;
+    height:10vh
+}

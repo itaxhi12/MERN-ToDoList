@@ -1,0 +1,17 @@
+.todos{
+    display:flex;
+    flex-direction: column;
+}
+
+.todos__date{
+    border:none;
+    font-size: larger;
+    font-family:'Alegreya SC', serif;
+    color:gray;
+    height:6vh;
+    width:100%;
+    text-align:center;
+}
+.todos__date:focus{
+    outline:none;
+}
