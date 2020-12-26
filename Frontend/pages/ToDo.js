@@ -4,9 +4,8 @@ import {useStateValue} from '../StateProvider'
 import './ToDo.css'
 function ToDo({key,id,task,status}) {
     const [{todos},dispatch] = useStateValue()
-    const [stat,setStat] = useState(true)    
     const changeStatus=()=>{
-        axios.put(`http://localhost:4000/todos/${id}`,{status:stat}).then(()=>{
+        axios.put(`http://localhost:4000/todos/${id}`,{status:true}).then(()=>{
             dispatch({
                 type:"CHANGE_STATUS",
                 id:id
@@ -16,12 +15,14 @@ function ToDo({key,id,task,status}) {
     }
 
     const deleteTask = ()=>{
-        axios.delete( `http://localhost:4000/todos/${id}`).catch(err=>console.log(err))
-        
+        axios.delete( `http://localhost:4000/todos/${id}`).then(()=>{
             dispatch({
                 type:"REMOVE_TASK",
                 id:id
             })
+        }).catch(err=>console.log(err))
+        
+            
     }
     return (
         <div className="todo">
@@ -32,10 +33,9 @@ function ToDo({key,id,task,status}) {
                
                {status?(<div></div>):(<input type="checkbox" 
                 value={true}
-                onChange={e=>{
-                    setStat(e.target.checked)
+                onChange={
                     changeStatus()
-                }}
+                }
                 
                 />)}
                 
